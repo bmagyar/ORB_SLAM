@@ -66,7 +66,7 @@ It only depends on OpenCV, but it should be included in the ROS distribution.
 2. Run this line from your catkin workspace root, `indigo` here should be replaced with your preferred ROS distro.
 	`rosdep install --from-paths src --ignore-src --rosdistro indigo -y` 
 
-3. Build all by running catkin_make in your workspace root.
+3. Build all by running `catkin_make - j1` in your workspace root(j1 for arm architecture).
 
 	*Tip: Set your favorite compilation flags in line 12 and 13 of* `Thirdparty/DBoW2/CMakeLists.txt` (by default -03 -march=native)
 
