@@ -1,0 +1,30 @@
+<Document Key for understanding : anything after '#' is a command>
+
+Check and Install following dependencies
+
+# sudo apt-get install libboost-all-dev 
+# sudo apt-get install libsuitesparse-dev
+# sudo apt-get install libblas-dev
+# sudo apt-get install liblapack-dev
+# sudo apt-get install libeigen3-dev
+
+1.) Create a folder - say "orb_slam_ws" and create a "src" folder inside it.
+
+2.) Intialize the folder as catkin workspace through the following command : 
+# catkin_init_workspace
+
+3.) Then clone the package (file size :49mb) inside the src folder using following command : 
+# git clone https://github.com/srv/ORB_SLAM.git
+
+4.) Once cloned, cut and paste the two folders (g2o and orb_slam) and a readme file from ORB_SLAM folder to src folder (i.e in src folder itself- and delete the ORB_SLAM folder).
+
+5.) # cd .. (to your catkin_workspace)
+
+6.) compile and build using # catkin_make
+
+7.) Before launching orb_slam, go to orb_slam/Data and extract ORBvoc.yml file from ORBvoc.yml.tar.gz
+
+8.) Source setup from workspace and launch orb_slam using command :
+# roslaunch orb_slam orb_slam.launch
+
+(If above doesn't work, simply go into the folder orb_slam_ws/src/orb_slam/launch and type # roslaunch orb_slam.launch )
